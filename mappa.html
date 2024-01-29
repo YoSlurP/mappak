@@ -99,7 +99,7 @@
             let temp = next
             next = items[index]
             items[index] = temp
-            document.getElementById(index).src = "/"+selection[items[index]]+".png"
+            document.getElementById(index).src = selection[items[index]]+".png"
             document.getElementById("next_kep").src = selection[next]+".png"
         }else{
             items[index] = next
