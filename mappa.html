@@ -75,7 +75,7 @@
         let html = ""
         for(let i = 0; i < 70; i++){
             items[i] = -1
-            html += "<img id='"+i+"' onclick='katt("+i+")' src='icons/semmi.png'>"
+            html += "<img id='"+i+"' onclick='katt("+i+")' src='/semmi.png'>"
         }
         lakatcount = 0
         papircount = 0
@@ -83,7 +83,7 @@
         tollcount = 0
         document.getElementById("pane").innerHTML=html
         next = rand()
-        document.getElementById("next_kep").src = selection[next]+".png"
+        document.getElementById("next_kep").src = "/"+selection[next]+".png"
         document.getElementById("lakat_counter").innerHTML = lakatcount+" db"
         document.getElementById("papir_counter").innerHTML = papircount+" db"
         document.getElementById("pendrive_counter").innerHTML = pendrivecount+" db"
@@ -99,13 +99,13 @@
             let temp = next
             next = items[index]
             items[index] = temp
-            document.getElementById(index).src = selection[items[index]]+".png"
-            document.getElementById("next_kep").src = selection[next]+".png"
+            document.getElementById(index).src = "/"+selection[items[index]]+".png"
+            document.getElementById("next_kep").src = "/"+selection[next]+".png"
         }else{
             items[index] = next
-            document.getElementById(index).src = selection[next]+".png"
+            document.getElementById(index).src = "/"+selection[next]+".png"
             next = rand()
-            document.getElementById("next_kep").src = selection[next]+".png"
+            document.getElementById("next_kep").src = "/"+selection[next]+".png"
         }
         count()
     }
@@ -144,15 +144,15 @@
 
         </div>
         <div id="counters">
-            <img src="lakat.png">
+            <img src="/lakat.png">
             <span id="lakat_counter" >00 db</span>
             <img src="/papir.png">
             <span id="papir_counter" >00 db</span>
-            <img src="pendrive.png">
+            <img src="/pendrive.png">
             <span id="pendrive_counter" >00 db</span>
             <img src="/toll.png">
             <span id="toll_counter" >00 db</span>
-            <img id="next_kep" onmouseover="this.src='semmi.png'" onmouseleave="this.src=selection[next]+'.png'" onclick="reset()" src="semmi.png">
+            <img id="next_kep" onmouseover="this.src='/semmi.png'" onmouseleave="this.src=selection[next]+'.png'" onclick="reset()" src="/semmi.png">
         </div>
     </div>
 
